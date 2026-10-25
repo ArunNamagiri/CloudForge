@@ -1,0 +1,10 @@
+services:
+  cloudforge-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: cloudforge-api:1.0.0
+    container_name: cloudforge-api
+    ports:
+      - "5001:5000"
+    restart: unless-stopped
