@@ -59,7 +59,7 @@ jobs:
       - name: Log in to Docker Hub
         uses: docker/login-action@v3
         with:
-          username: arunnamagiri
+          username: 
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build and push image
@@ -68,5 +68,5 @@ jobs:
           context: .
           push: true
           tags: |
-            ${{ vars.DOCKERHUB_USERNAME }}/cloudforge-api:latest
-            ${{ vars.DOCKERHUB_USERNAME }}/cloudforge-api:${{ github.sha }}
+            arunnamagiri/cloudforge-api:latest
+            arunnamagiri/cloudforge-api:${{ github.sha }}
